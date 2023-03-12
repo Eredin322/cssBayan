@@ -145,7 +145,7 @@ input[type="radio"]:checked + section > header > h2{
     section:hover .img-container img {
         visibility: visible;
         transition: 1s;
-        width: 70%;
-        height: 70%;
+        width: 40%;
+        height: 40%;
     }
 }
