@@ -63,7 +63,7 @@ header .cross {
     visibility: hidden;
     width: 2.5%;
     height: 2.5%;
-    font-size: 2em;
+    font-size: 1.5em;
     transform: rotate(45deg);
 }
 
