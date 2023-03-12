@@ -7,18 +7,13 @@
 body {
     display: flex;
     justify-content: center;
+    font-size: 4vw;
 }
 
 main {
-    width: 50%;
-}
-main:hover section h2{
-    color: black;
+    width: 80%;
 }
 
-main:hover section header .cross {
-    visibility: visible;
-}
 
 section {
     cursor: pointer;
@@ -37,20 +32,9 @@ section:active > header > .cross{
     color: #0059D9;
 }
 
-section:hover header .cross {
-    transition: 0.3s;
-    transform: rotate(0deg);
-}
-
-section:hover .img-container img {
-    visibility: visible;
-    transition: 1s;
-    width: 40%;
-    height: 40%;
-}
-
 h2 {
     color: #0059D9;
+    margin: 0%;
 }
 
 header {
@@ -60,9 +44,6 @@ header {
 }
 
 header .cross {
-    visibility: hidden;
-    width: 2.5%;
-    height: 2.5%;
     font-size: 1.5em;
     transform: rotate(45deg);
 }
@@ -70,6 +51,7 @@ header .cross {
 .img-container {
     text-align: center;
     height: 0%;
+    font-size: 0em;
 }
 
 .img-container img {
@@ -85,8 +67,8 @@ input[type="radio"]:checked + section > header > .cross {
 input[type="radio"]:checked + section > .img-container > img{
     visibility: visible;
     transition: 0s;
-    width: 40%;
-    height: 40%;
+    width: 70%;
+    height: 70%;
 }
 
 input[type="radio"]:checked + section > header > h2{
@@ -95,4 +77,70 @@ input[type="radio"]:checked + section > header > h2{
 
 .hidden {
     display: none;
+}
+
+@media screen and (min-width: 820px) {
+    body {
+        font-size: 2vw;
+    }
+    main {
+        width: 50%;
+    }
+    input[type="radio"]:checked + section > .img-container > img{
+        visibility: visible;
+        transition: 0s;
+        width: 40%;
+        height: 40%;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    body {
+        font-size: 1.5vw;
+    }
+    main {
+        width: 50%;
+    }
+
+    header .cross {
+        font-size: 1.5em;
+    }
+    input[type="radio"]:checked + section > .img-container > img{
+        visibility: visible;
+        transition: 0s;
+        width: 40%;
+        height: 40%;
+    }
+    header .cross {
+        visibility: hidden;
+        font-size: 1.5em;
+        transform: rotate(45deg);
+    }
+}
+
+@media (hover: hover){
+    main:hover section h2{
+        color: black;
+    }
+    
+    main:hover section header .cross {
+        visibility: visible;
+    }
+
+    section:hover .img-container img {
+        width: 40%;
+        height: 40%;
+    }
+
+    section:hover header .cross {
+        transition: 0.3s;
+        transform: rotate(0deg);
+    }
+    
+    section:hover .img-container img {
+        visibility: visible;
+        transition: 1s;
+        width: 70%;
+        height: 70%;
+    }
 }
