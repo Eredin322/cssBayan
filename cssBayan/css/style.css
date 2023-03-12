@@ -3,3 +3,96 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 50%;
+}
+main:hover section h2{
+    color: black;
+}
+
+main:hover section header .cross {
+    visibility: visible;
+}
+
+section {
+    cursor: pointer;
+}
+
+section:active {
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+input[type="radio"]:checked + section:active > header > h2 {
+    color: #0059D9;
+}
+
+section:active > header > .cross{
+    color: #0059D9;
+}
+
+section:hover header .cross {
+    transition: 0.3s;
+    transform: rotate(0deg);
+}
+
+section:hover .img-container img {
+    visibility: visible;
+    transition: 1s;
+    width: 40%;
+    height: 40%;
+}
+
+h2 {
+    color: #0059D9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .cross {
+    visibility: hidden;
+    width: 2.5%;
+    height: 2.5%;
+    font-size: 2em;
+    transform: rotate(45deg);
+}
+
+.img-container {
+    text-align: center;
+    height: 0%;
+}
+
+.img-container img {
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
+
+input[type="radio"]:checked + section > header > .cross {
+    transform: rotate(0deg); 
+}
+
+input[type="radio"]:checked + section > .img-container > img{
+    visibility: visible;
+    transition: 0s;
+    width: 40%;
+    height: 40%;
+}
+
+input[type="radio"]:checked + section > header > h2{
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
