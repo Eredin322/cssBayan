@@ -28,6 +28,10 @@ input[type="radio"]:checked + section:active > header > h2 {
     color: #0059D9;
 }
 
+input[type="radio"] + section:active > header > h2 {
+    color: #0059D9;
+}
+
 section:active > header > .cross{
     color: #0059D9;
 }
